@@ -206,16 +206,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LocaleHundler\LocaleHundler\LocaleHundler.csproj">
-      <Project>{5e36cb19-5b24-4e4c-9c79-731cc589a12f}</Project>
-      <Name>LocaleHundler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Open Source\White Tiger\White Tiger\White Tiger\White Tiger.csproj">
+    <ProjectReference Include="..\..\White Tiger\White Tiger\White Tiger\White Tiger.csproj">
       <Project>{1912142a-c641-4ae7-91c8-c6b216ca50f5}</Project>
       <Name>White Tiger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\PluginHundler\PluginHundler\PluginHundler.csproj">
-      <Project>{40A88CA4-5EF6-4B94-A036-2808352680CC}</Project>
+    <ProjectReference Include="..\LocaleHundler\LocaleHundler\LocaleHundler.csproj">
+      <Project>{5e36cb19-5b24-4e4c-9c79-731cc589a12f}</Project>
+      <Name>LocaleHundler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginHundler\PluginHundler\PluginHundler.csproj">
+      <Project>{40a88ca4-5ef6-4b94-a036-2808352680cc}</Project>
       <Name>PluginHundler</Name>
     </ProjectReference>
   </ItemGroup>

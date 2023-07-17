@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<pynakas>
+	<eggrafi>
+		<mail_address_to>hydro.forest@gmail.com</mail_address_to>
+		<user_name>anonymuser.anonymuser@gmail.com</user_name>
+		<password>salonika</password>
+		<mail_server>smtp.gmail.com</mail_server>
+		<port>587</port>
+		<mail_address_from>anonymuser.anonymuser@gmail.com</mail_address_from>
+		
+	</eggrafi>
+</pynakas>

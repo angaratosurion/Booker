@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D3FF4BB-A4A8-45D7-9FEC-AD8E00BF5B69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Booker</RootNamespace>
+    <AssemblyName>BookerCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\BookerCore.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\BookerCore.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hydrobase, Version=1.5.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Hydrobase.1.5.1.4\lib\net40\Hydrobase.dll</HintPath>
+    </Reference>
+    <Reference Include="HydroMultyUser">
+      <HintPath>..\..\HydroMultyUser\HydroMultyUser\bin\Release\HydroMultyUser.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="RSSApplicationUpdater">
+      <HintPath>..\..\RSSApplicationUpdater\RSSApplicationUpdater\bin\Release\RSSApplicationUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="Scrabler">
+      <HintPath>..\..\Open Source\Scrabler\Scrabler\bin\Release\Scrabler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimeLimitedWindow">
+      <HintPath>..\..\TimiLimitedWindow\TimiLimitedWindow\bin\Release\TimeLimitedWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WareForms, Version=0.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WareForms\WareForms\bin\Release\WareForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookerKernel.cs" />
+    <Compile Include="BookerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookerMain.Designer.cs">
+      <DependentUpon>BookerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findwnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findwnd.Designer.cs">
+      <DependentUpon>findwnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResults.Designer.cs">
+      <DependentUpon>frmResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="optionsCore.cs" />
+    <Compile Include="optionsGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="optionsGUI.Designer.cs">
+      <DependentUpon>optionsGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="programm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Service References\WhiteTigerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WhiteTiger Client\Tools.cs" />
+    <Compile Include="WhiteTiger Client\WTClientCore.cs" />
+    <Compile Include="WhiteTiger Client\WhiteTigerCleint.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.el-GR.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.en.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookerMain.el-GR.ResX">
+      <DependentUpon>BookerMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookerMain.el.resx">
+      <DependentUpon>BookerMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookerMain.en.ResX">
+      <DependentUpon>BookerMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookerMain.resx">
+      <DependentUpon>BookerMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findwnd.el-GR.resx">
+      <DependentUpon>findwnd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findwnd.en.ResX">
+      <DependentUpon>findwnd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findwnd.resx">
+      <DependentUpon>findwnd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResults.el-GR.resx">
+      <DependentUpon>frmResults.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResults.en.resx">
+      <DependentUpon>frmResults.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResults.resx">
+      <DependentUpon>frmResults.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optionsGUI.el-GR.resx">
+      <DependentUpon>optionsGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optionsGUI.en.resx">
+      <DependentUpon>optionsGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optionsGUI.resx">
+      <DependentUpon>optionsGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LocaleHundler\LocaleHundler\LocaleHundler.csproj">
+      <Project>{5e36cb19-5b24-4e4c-9c79-731cc589a12f}</Project>
+      <Name>LocaleHundler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Open Source\White Tiger\White Tiger\White Tiger\White Tiger.csproj">
+      <Project>{1912142a-c641-4ae7-91c8-c6b216ca50f5}</Project>
+      <Name>White Tiger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PluginHundler\PluginHundler\PluginHundler.csproj">
+      <Project>{40A88CA4-5EF6-4B94-A036-2808352680CC}</Project>
+      <Name>PluginHundler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\WhiteTigerService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WhiteTigerService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WhiteTigerService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WhiteTigerService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WhiteTigerService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WhiteTigerService\WhiteTigerService.wsdl" />
+    <None Include="ΥδροΒάση%28HydroBase%29Documentation.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WhiteTigerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WhiteTigerService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WhiteTigerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WhiteTigerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WhiteTigerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WhiteTiger Client\WhiteTigerClientSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

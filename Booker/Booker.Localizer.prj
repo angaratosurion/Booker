@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<LProjDataSet>
+  <PropertyGroup>
+    <OutputPath />
+    <FieldsVisible />
+    <InactiveLanguageCode />
+    <Languages />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference>
+      <Name>Booker</Name>
+      <FileName>D:\Τα Προγραμματά μου\dotNet\Booker\Booker\Booker.csproj</FileName>
+    </Reference>
+  </ItemGroup>
+</LProjDataSet>
